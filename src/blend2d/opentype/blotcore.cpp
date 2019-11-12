@@ -232,12 +232,15 @@ static BLResult initPost(BLOTFaceImpl* faceI, const BLFontData* fontData) noexce
   else {
     int underlinePosition = post->underlinePosition();
     int underlineThickness = post->underlineThickness();
+    int isFixedPitch = post->isFixedPitch();
 
     trace.info("UnderlinePosition: %d\n", underlinePosition);
     trace.info("UnderlineThickness: %d\n", underlineThickness);
+    trace.info("IsFixedPitch: %d\n", isFixedPitch);
 
     faceI->designMetrics.underlinePosition = underlinePosition;
     faceI->designMetrics.underlineThickness = underlineThickness;
+    faceI->designMetrics.isFixedPitch = isFixedPitch;
   }
 
   return BL_SUCCESS;

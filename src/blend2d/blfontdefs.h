@@ -1108,6 +1108,8 @@ struct BLFontDesignMetrics {
   int strikethroughPosition;
   //! Text strikethrough thickness.
   int strikethroughThickness;
+  //! Is fixed pitch
+  int isFixedPitch;
 
   // --------------------------------------------------------------------------
   #ifdef __cplusplus
