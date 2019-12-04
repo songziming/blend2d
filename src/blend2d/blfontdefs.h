@@ -49,7 +49,7 @@ BL_DEFINE_ENUM(BLGlyphPlacementType) {
 };
 
 BL_DEFINE_ENUM(BLGlyphRunFlags) {
-  //! Glyph-run contains USC-4 string and not glyphs (glyph-buffer only).
+  //! Glyph-run contains UCS-4 string and not glyphs (glyph-buffer only).
   BL_GLYPH_RUN_FLAG_UCS4_CONTENT              = 0x10000000u,
   //! Glyph-run was created from text that was not a valid unicode.
   BL_GLYPH_RUN_FLAG_INVALID_TEXT              = 0x20000000u,
@@ -1108,7 +1108,7 @@ struct BLFontDesignMetrics {
   int strikethroughPosition;
   //! Text strikethrough thickness.
   int strikethroughThickness;
-  //! Is fixed pitch
+  //! Is fixed pitch.
   int isFixedPitch;
 
   // --------------------------------------------------------------------------

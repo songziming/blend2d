@@ -875,7 +875,7 @@ BLResult blFontMapTextToGlyphs(const BLFontCore* self, BLGlyphBufferCore* gb, BL
   BL_PROPAGATE(faceI->funcs.mapTextToGlyphs(faceI, gbI->glyphItemData, gbI->size, stateOut));
 
   gbI->flags = gbI->flags & ~BL_GLYPH_RUN_FLAG_UCS4_CONTENT;
-  if (stateOut->undefinedCount == 0)
+  if (stateOut->undefinedCount)
     gbI->flags |= BL_GLYPH_RUN_FLAG_UNDEFINED_GLYPHS;
   return BL_SUCCESS;
 }
